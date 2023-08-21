@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width , initial-scale=1">
+		<style>
+			body{
+				box-sizing: border-box;
+				justify-content: center;
+				margin: 0;
+				width: 100%;
+			}
+			ul{
+				display: flex;
+				flex-flow : row wrap;
+				list-style-type: none;
+				justify-content: center;
+			}
+			li{
+				margin-left: 15px;
+			}
+			.dogsection{
+				display :flex;
+				flex-flow: wrap row;
+				justify-content: center;
+								width: 100%;
+
+			}
+			
+			.dogdiv{
+				width: 25%;
+				background-color: blue;
+				border: 1px black solid;
+				text-align: center;
+			}
+			@media all and (min-width:1024px){
+				.dogdiv{
+					width: 20%;
+				}
+			}
+			@media all and (min-width:768px) and (max-width:1023px)
+			{
+				.dogdiv{
+					width: 40%;
+				}				
+			}
+			@media all and (max-width:767px){
+				.dogdiv{
+					width: 80%;
+				}				
+			}
+			#fir{
+				background-color: yellow;
+			}
+			#fir:hover{
+				transform:scale(1.5);
+			}
+			#sec{
+				background-color: skyblue;
+				transition-property: all ;
+				transition-duration: 1s;
+			}
+			#sec:hover{
+				transform:scale(1.5);
+			}
+			
+			#thr{
+				background-color: red;
+				animation: pra 3s infinite;
+			}
+			@keyframes pra{
+				from{
+					transform: skew(50deg);
+				}
+				50%{
+					transform:rotate(-40deg)
+				}
+				to{
+					transform:translate(10px, 20px);		
+				}
+			}
+			#for{
+				background-color: blueviolet;
+			}
+			#for:hover{
+				transform:scale(1.5);
+			}
+		</style>	 
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<a href=""><li id="fir">사이트소개</li></a>
+					<a href=""><li id="sec">애견분양</li></a>
+					<a href=""><li id="thr">고객센터</li></a>
+					<a href=""><li id="for">애견자랑</li></a>
+				</ul>		
+			</nav>
+		</header>
+		<section class="dogsection">
+			<div class="dogdiv"><img src="img/dachshund-1519374_1280.jpg" width="50%" alt="dogimg"><br>
+			견종 :<br>
+			성별 :<br>
+			나이 :<br>
+			분양가 :<br></div>
+			<div class="dogdiv"><img src="img/dachshund-1519374_1280.jpg" width="50%" alt="dogimg"><br>
+			견종 :<br>
+			성별 :<br>
+			나이 :<br>
+			분양가 :<br></div>
+			<div class="dogdiv"><img src="img/dachshund-1519374_1280.jpg" width="50%" alt="dogimg"><br>
+			견종 :<br>
+			성별 :<br>
+			나이 :<br>
+			분양가 :<br></div>
+			<div class="dogdiv"><img src="img/dachshund-1519374_1280.jpg" width="50%" alt="dogimg"><br>
+			견종 :<br>
+			성별 :<br>
+			나이 :<br>
+			분양가 :<br></div>
+		</section>
+	</body>
+</html>
