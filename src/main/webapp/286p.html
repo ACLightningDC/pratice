@@ -29,17 +29,17 @@ $(function(){
 	});
 });
 
-load()
-ready()
-error()
 
-mouseclick()
-dbmouseclick()
-mouseover()
-mouseout()
-mouseenter()
-hover()
-mouse
+$(function(){
+	var beforMenu = null;
+	
+	$("#gnb > li > a").on("mouseover focus",function(){
+		if(beforeMenu) beforeMenu.css({background:"none"});
+		$(this).css({"background-color":"skyblue"});
+		beforeMenu=$(this);
+	});
+	$
+})
 
 
 </script>
