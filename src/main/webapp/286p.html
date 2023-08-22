@@ -38,8 +38,10 @@ $(function(){
 		$(this).css({"background-color":"skyblue"});
 		beforeMenu=$(this);
 	});
-	$
-})
+	$("#gnb").on("mouseleve",function(){
+		if(beforMenu) beforMenu.css({background:"none"})
+	});
+});
 
 
 </script>
