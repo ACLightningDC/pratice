@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>이벤트</title>
+<title>Insert title here</title>
+<script type="text/javascript" src="../../js/jquery.js"></script><!-- jquery 파일을 위에 올려놔야 됨 -->
+<script type="text/javascript" src="javascript.js"></script>
 <style>
 	*{margin:0;padding:0;box-sizing:border-box;}
 	body{padding:20px;}
@@ -12,24 +14,25 @@
 	.gnb li{width:25%;float: left;padding:5px;}
 	.gnb li a{border: 1px solid #000;display: block;padding:5px 0;}
 </style>
-<script src="js/jquery.js"></script>
-<script type="text/javascript">
-$(function(){
-	var beforeMenu =null; 
-	$(".gnb > li > a ").on("mouseover focus" , function(){
-		if(beforeMenu) beforeMenu.css({background:"none"});
-		$(this).css({"background-color":"skyblue"});
-		beforeMenu = $(this); 
-	});
-	$(".gnb").on("mouseleave", function(){
-		if(beforeMenu) beforeMenu.css({"background":"none"});
-	});	
-});
+<script>
 
 </script>
-
 </head>
 <body>
+	<ul id="myList1">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+		<li>내용4</li>
+	</ul>
+	
+	<ul id="myList2">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+		<li>내용4</li>
+	</ul>
+	
 	<ul class="gnb">
 		<li><a href="#">menu1</a></li>
 		<li><a href="#">menu2</a></li>
