@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>컴퓨터 상품</title>
+        <style>
+            body{
+                box-sizing: border-box;
+                margin:0;
+				justify-content: center; 
+				text-align: center;
+				           }
+            ul {
+				display:flex;
+				flex-direction:row;
+				list-style-type:none;
+				justify-content:center;
+                
+            }
+            li{
+            	margin-right: 10px;
+            	background-color: black;
+            	padding: 5px;
+            	
+            	transition-property: all;
+            	transition-duration: 2s;
+            	
+            }
+            li:hover{
+            	transform:scale(1.5);
+            	
+            }
+            a{
+            	text-decoration: none;
+            	color:white;
+            }
+            .comcon{
+            	display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+            }
+            .comdiv{
+            	width:23%;
+            	border:1px solid black;
+            }
+            .comdiv img{
+            	width :45%;
+            }
+            
+            @media all and (min-width:1024px) {
+       		  .comdiv{
+            	width:23%;
+            }
+            }
+            @media all and (max-width:1023px) and (min-width:768px) {
+             .comdiv{
+            	width:45%;
+            }
+            }
+            @media all and (max-width:767px) {
+	            .comdiv{
+	            	width:95%;
+	            }
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a href="#">회사소개</a>
+            </li>
+            <li>
+                <a href="컴퓨터 상품.html">컴퓨터 상품</a>
+            </li>
+            <li>
+               <a href="#">고객 센터</a>
+            </li>
+            <li>
+                <a href="컴퓨터 주문.html">컴퓨터 주문</a>
+            </li>
+        </ul>
+        <div class="comcon">
+            <div class="comdiv">
+            <img alt="컴퓨터" src="img/comf.jpg"><br>
+                컴퓨터 제조사 :  s <br>
+                    모니터종류 : 게이밍  <br>
+                    cpu 종류 : 코어i7<br>
+                    가격 50만원<br>
+                
+            </div>
+            <div class="comdiv">
+            <img alt="컴퓨터" src="img/como.jpg">
+                <div>컴퓨터 제조사 : a<br>
+                    모니터종류 : 표준<br>
+                    cpu 종류 : 코어i5<br>
+                    가격 : 40만원<br>
+                </div>
+            </div>
+            <div class="comdiv">
+            <img alt="컴퓨터" src="img/coms.jpg">
+                <div>컴퓨터 제조사 : h <br>
+                    모니터종류 : 표준<br>
+                    cpu 종류 :i5<br>
+                    가격 : 50만원<br>
+                </div>
+            </div>
+            <div class="comdiv">
+            <img alt="컴퓨터" src="img/comt.jpg">
+                <div>컴퓨터 제조사 : l<br>
+                    모니터종류 : 일반<br>
+                    cpu 종류: i3<br>
+                    가격 :30만원<br>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
