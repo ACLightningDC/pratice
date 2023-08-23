@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<style>
+	*{margin:0;padding:0;box-sizing:border-box;}
+	body{padding:20px;}
+	li{list-style:none;}
+	a{text-decoration: none;color: #000;}
+	.gnb{width:400px;text-align: center;overflow: hidden;}
+	.gnb li{width:25%;float: left;padding:5px;}
+	.gnb li a{border: 1px solid #000;display: block;padding:5px 0;}
+</style>
+<script src="js/jquery.js"></script>
+<script>
+/* 먼저 바깥쪽 사용을 위한 function사용  */
+$(function(){
+	var beforeMenu = null;
+	/* 변수 사용가능하게 등록 */
+	/* 앞에 달러넣기 class 니까 점찍기*/
+	$(".gnb > li > a ").on("mouseover focus",function(){/* on 변수들 ""로 둘러싸기 */
+		if(beforeMenu) beforeMenu.css({background:"none"});/* 백그라운드시 사용필요없음 , 다른 li 선택시 초기화하기 */
+		$(this).css({"background-color":"skyblue"});/* 선언시 사용 skyblue 다 bluesky는 없어 */
+		beforeMenu=$(this); /* 초기화를 위해 this 객체를 beforeMenu로  */
+	});
+	$(".gnb").on("mouseleave", function(){
+		if(beforeMenu) beforeMenu.css({background:"none"});/* 밖으로 나가면 초기화하기 */
+	});
+});
+
+
+$(function(){
+	var beforMenu = null;
+	
+	$("#gnb > li > a").on("mouseover focus",function(){
+		if(beforeMenu) beforeMenu.css({background:"none"});
+		$(this).css({"background-color":"skyblue"});
+		beforeMenu=$(this);
+	});
+	$("#gnb").on("mouseleve",function(){
+		if(beforMenu) beforMenu.css({background:"none"})
+	});
+});
+
+
+</script>
+</head>
+<body>
+	<ul class="gnb">
+		<li><a href="#">menu1</a></li>
+		<li><a href="#">menu2</a></li>
+		<li><a href="#">menu3</a></li>
+		<li><a href="#">menu4</a></li>
+	</ul>
+</body>
+</html>
